@@ -29,19 +29,19 @@ def f0(bot,update):
   aio.send_data(fan.key,0)
   bot.message.reply_text('FAN TURNED OFF')
 def main(bot,update):
-  a=bot.message.reply_text
-  if (a=="Turn on light"):
-    l1(bot,update)
-  elif (a=="Turn off light"):
-    l0(bot,update)
-  elif (a=="Turn on fan"):
-    f1(bot,update)
-  elif (a=="Turn off fan"):
-    f0(bot,update)
-  elif (a=="/help"):
-    help1(bot,update)
-  elif (a=="/start"):
+  a = bot.message.text
+  if (a == "/start" ):
     start(bot,update)
+  elif (a == "/help" ):
+    help1(bot,update)
+  elif (a == "Turn on light" ):
+    l1(bot,update)
+  elif (a == "Turn off light"):
+    l0(bot,update)
+  elif (a == "Turn on fan" ):
+    f1(bot,update)
+  elif (a == "Turn off fan" ):
+    f0(bot,update)
   else :
     bot.message.reply_text('Invalid input Use /help for commands')
 bot_token = '1989461961:AAHPC0F3thD4SpiBZYwfVHOSh6uPAV5wDJ8'
