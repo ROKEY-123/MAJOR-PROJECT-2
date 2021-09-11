@@ -3,7 +3,7 @@ from telegram.ext import Updater, MessageHandler, Filters
 from Adafruit_IO import Client
 user = os.getenv('user')
 api = os.getenv('api')
-aio = Client('user', 'api')
+aio = Client(user, api)
 light = aio.feeds('light')
 fan = aio.feeds('fan')
 def help1(bot,update):
